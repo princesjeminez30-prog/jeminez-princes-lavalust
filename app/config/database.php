@@ -58,16 +58,15 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 
 $database['main'] = array(
-    'driver'	=> '',
-    'hostname'	=> getenv('DB_HOST') ?: '',
-    'port'		=> getenv('DB_PORT') ?: '',
-    'username'	=> getenv('DB_USERNAME') ?: '',
-    'password'	=> getenv('DB_PASSWORD') ?: '',
-    'database'	=> getenv('DB_NAME') ?: '',
-    'charset'	=> '',
-    'dbprefix'	=> '',
-    // Optional for SQLite
-    'path'      => ''
+    'driver'   => '',
+    'hostname' => getenv('DB_HOST') ?: 'mysql-6e6f07f-princesjeminez30-1560.a.aivencloud.com',
+    'port'     => getenv('DB_PORT') ?: '16218',
+    'username' => getenv('DB_USERNAME') ?: 'avnadmin',
+    'password' => getenv('DB_PASSWORD') ?: 'AVNS_CNsIolSlEv6o9V7Li8N',
+    'database' => getenv('DB_DATABASE') ?: 'mydb',
+    'charset'  => 'utf8mb4',
+    'dbprefix' => '',
+    'path'     => ''
 );
 
 ?>
