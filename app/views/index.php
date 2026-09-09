@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -213,6 +214,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -221,7 +223,7 @@
                 <div class="brand-logo">SP</div>
                 <span class="brand-title">Cessy Student Portal</span>
             </div>
-            
+
             <div class="nav-links">
                 <a href="<?= site_url('student'); ?>" class="nav-link active">Home</a>
                 <a href="<?= site_url('student/profile'); ?>" class="nav-link">Student Profile</a>
@@ -230,12 +232,13 @@
     </nav>
 
     <main class="main-content">
-        
-  
+
+
         <div class="hero-card">
             <h1 class="hero-title">Welcome to Student Portal!</h1>
             <p class="hero-description">
-                Access your profile details, check academic updates, and manage your student information directly from your home dashboard.
+                Access your profile details, check academic updates, and manage your student information directly from
+                your home dashboard.
             </p>
             <div class="hero-actions">
                 <a href="<?= site_url('student/profile'); ?>" class="btn-primary">
@@ -248,7 +251,8 @@
             <div class="card">
                 <div class="card-icon-wrapper">
                     <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
                 <h2 class="card-title">Account Status</h2>
@@ -259,10 +263,11 @@
 
     </main>
 
-   
+
     <footer class="footer">
         &copy; <?= date('Y'); ?> LavaLust Student System. All rights reserved.
     </footer>
 
 </body>
+
 </html>
