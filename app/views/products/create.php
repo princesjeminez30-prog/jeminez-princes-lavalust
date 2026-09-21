@@ -34,7 +34,7 @@
 
             <div>
                 <label for="product_name" class="block text-sm font-medium text-slate-700 mb-1">Product Name</label>
-                <input type="text" id="product_name" name="product_name" required placeholder="e.g., Wireless Mouse"
+                <input type="text" id="product_name" name="product_name" required placeholder="e.g., Lash Serum"
                     class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white text-sm text-slate-800">
             </div>
 
