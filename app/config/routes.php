@@ -45,13 +45,22 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 /** @var object $router **/
 
 $router->get('/', 'Welcome::index');
+
 $router->get('/student', 'StudentController::index');
 $router->get('/student/profile', 'StudentController::profile')->middleware('student');
 $router->get('/users', 'UsersController::index');
 
+/*
+| AUTHENTICATION
+*/
+
 $router->get('/login', 'AuthController::login');
 $router->post('/login/submit', 'AuthController::authenticate');
 $router->get('/logout', 'AuthController::logout');
+
+/*
+| WEB PRODUCTS
+*/
 
 $router->get('/products', 'ProductController::index');
 $router->get('/products/create', 'ProductController::create');
@@ -59,3 +68,34 @@ $router->post('/products/store', 'ProductController::store');
 $router->get('/products/edit/{id}', 'ProductController::edit');
 $router->post('/products/update/{id}', 'ProductController::update');
 $router->get('/products/delete/{id}', 'ProductController::delete');
+
+/*
+| MIGRATIONS
+*/
+
+$router->get('/create-migration/{migration_class}', 'MigrationController::create_migration');
+$router->get('/migrate', 'MigrationController::migrate');
+$router->get('/rollback', 'MigrationController::rollback');
+$router->get('/rollback-all', 'MigrationController::rollback_all');
+$router->get('/refresh', 'MigrationController::refresh');
+$router->get('/status', 'MigrationController::status');
+
+/*
+| API AUTHENTICATION
+*/
+
+$router->options('/api/login', 'AuthController::login');
+$router->post('/api/login', 'AuthController::login');
+
+/*
+| PRODUCT API
+*/
+$router->get('/test-db', 'DatabaseTestController::index');
+$router->options('/api/products', 'ProductController::index');
+$router->options('/api/products/{id}', 'ProductController::index');
+
+$router->get('/api/products', 'ProductController::index');
+$router->post('/api/products', 'ProductController::create');
+$router->put('/api/products/{id}', 'ProductController::update');
+$router->patch('/api/products/{id}', 'ProductController::update');
+$router->delete('/api/products/{id}', 'ProductController::delete');
